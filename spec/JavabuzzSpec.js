@@ -42,16 +42,32 @@ describe('Javabuzz', function() {
       expect(javabuzz.says(3)).toEqual("Java");
     });
 
+    it('"Java" when a number is divisible by 3', function() {
+      expect(javabuzz.says(6)).toEqual("Java");
+    });
+
     it('"Buzz" when a number is divisible by 5', function() {
       expect(javabuzz.says(5)).toEqual("Buzz");
+    });
+
+    it('"Buzz" when a number is divisible by 5', function() {
+      expect(javabuzz.says(10)).toEqual("Buzz");
     });
 
     it('"JavaBuzz" when a number is divisible by 3 and 5', function() {
       expect(javabuzz.says(15)).toEqual("JavaBuzz");
     });
 
+    it('"JavaBuzz" when a number is divisible by 3 and 5', function() {
+      expect(javabuzz.says(30)).toEqual("JavaBuzz");
+    });
+
     it('returns the number if not divisible by 3 or 5', function() {
       expect(javabuzz.says(1)).toEqual(1);
+    });
+
+    it('returns the number if not divisible by 3 or 5', function() {
+      expect(javabuzz.says(14)).toEqual(14);
     });
 
   });
